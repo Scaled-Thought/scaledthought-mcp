@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.scaledthought/mcp",
+  "title": "ScaledThought",
+  "description": "Manage a ScaledThought account: API keys, budgets, usage and prepaid top-ups. Needs an API key.",
+  "version": "0.1.0",
+  "websiteUrl": "https://scaledthought.com/go/org-mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.us.scaledthought.com/mcp?source=org-mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <ScaledThought API key>. Get one first: npx -y scaledthought@latest init --region us --source org-mcp",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
